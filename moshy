@@ -62,14 +62,16 @@ Options:
     list            List every remote hostname configured as profile
 
 Files:
-    /etc/moshy.conf     system configuration
-    ~/.moshy.conf       per-user configuration
+    /etc/moshy.conf             system configuration
+    ~/.config/moshy/moshy.conf  per-user configuration
+    ~/.moshy.conf               per-user configuration (alternative)
 """
 
-from configparser import ConfigParser
+from configparser import RawConfigParser
 
 config_paths = [
     '/etc/moshy.conf',
+    os.path.expanduser(~/.config/moshy/moshy.conf),
     os.path.expanduser('~/.moshy.conf')
 ]
 
@@ -90,7 +92,7 @@ def parse_hostname(hostname_argument, config):
     }
     profiles = []
     if hostname_argument is not None:
-        log.debug("Parsing hosname argument '{host}'".format(host=hostname_argument))
+        log.debug("Parsing hostname argument '{host}'".format(host=hostname_argument))
         connection = args['<hostname>'].split('@')
         if len(connection) > 1:
             hostname = connection[1]
@@ -140,7 +142,7 @@ if __name__ == "__main__":
 
     log.debug("Got following arguments:\n{args}".format(args=args))
 
-    config = ConfigParser(defaults=defaults)
+    config = RawConfigParser(defaults=defaults)
     config.read(config_paths)
 
     host_setup = None
