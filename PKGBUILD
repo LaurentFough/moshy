@@ -1,6 +1,6 @@
 # Maintainer: Laurent OF Fough <ryan.farley@gmx.com>
 pkgname=moshy-git
-pkgver=
+pkgver=r12.1f8a349
 pkgrel=1
 pkgdesc="A simple Mosh wrapper with profile settings"
 arch=('any')
