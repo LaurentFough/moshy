@@ -71,7 +71,7 @@ from configparser import RawConfigParser
 
 config_paths = [
     '/etc/moshy.conf',
-    os.path.expanduser(~/.config/moshy/moshy.conf),
+    os.path.expanduser('~/.config/moshy/moshy.conf'),
     os.path.expanduser('~/.moshy.conf')
 ]
 
