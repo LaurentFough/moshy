@@ -26,8 +26,9 @@ After a successful clone of *moshy* repository, you can simply install
 Moshy wraps mosh in order to use configuration profiles from the
 following path:
 
-    /etc/moshy.conf     # System configuration
-    ${HOME}/.moshy.conf # Per-user configuration
+    /etc/moshy.conf                  # System configuration
+    ${HOME}/.config/moshy/moshy.conf # Per-user configuration
+    ${HOME}/.moshy.conf              # Per-user configuration
 
 
 You can select a profile by passing +<hostname>+ argument and extra arguments
