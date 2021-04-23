@@ -1,4 +1,4 @@
-# Maintainer: Laurent OF Fough <ryan.farley@gmx.com>
+# Maintainer: Łaurent ʘ❢Ŧ Ŧough <laurent dot fough at gmail dot com>
 pkgname=moshy-git
 pkgver=r12.1f8a349
 pkgrel=1
