@@ -34,6 +34,10 @@ following path:
 You can select a profile by passing +<hostname>+ argument and extra arguments
 which will be executed to the remote mosh session.
 
+== TODO
+Track down weird bug re: capitalization in profile name, or domain name (pulled from ~/.ssh/config)
+- causes moshy to bjork and misfire; that is: connect with invalid/default params
+
 The +<hostname>+ parameter match configuration sections and can be formatted like
 the following:
 
